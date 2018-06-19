@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {School} from "../../model/school.model";
+import {School} from "../../../model/school.model";
 
 @Component({
   selector: 'app-top-school-list',
