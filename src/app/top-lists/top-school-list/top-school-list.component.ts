@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {School} from "../../model/school.model";
 
 @Component({
   selector: 'app-top-school-list',
@@ -6,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./top-school-list.component.css']
 })
 export class TopSchoolListComponent implements OnInit {
+  private schoolList: School[] = [];
 
-  constructor() { }
+  constructor() {
+      this.schoolList.push(new School("Corvinus University of Budapest", 5));
+      this.schoolList.push(new School("Technical University of Budapest", 3))
+  }
 
   ngOnInit() {
   }
