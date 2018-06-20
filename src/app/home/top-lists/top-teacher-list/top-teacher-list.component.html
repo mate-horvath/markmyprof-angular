@@ -1,0 +1,11 @@
+<div class="row">
+        <div class="col-xs-12">
+            <ul class="list-group">
+                <h3>Top Professors</h3>
+                <a class="list-group-item clearfix" style="cursor: pointer" *ngFor="let professor of professorList">
+                    <div>{{ professor.getTitle()}} {{ professor.getLastName()}} {{ professor.getFirstName()}}</div>
+                    <div>{{ professor.getRating() }}</div>
+                </a>
+            </ul>
+        </div>
+ </div>
