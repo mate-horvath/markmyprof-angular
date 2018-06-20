@@ -1,0 +1,23 @@
+.footer p {
+    margin: 0;
+}
+.footer-bottom {
+    background: white;
+    color:grey;
+    border-top: 1px solid #DDDDDD;
+    padding-top: 5px;
+    padding-bottom: 0px;
+}
+.footer-bottom pull-left {
+    padding-top: 6px;
+}
+.copyright-devider{
+    padding-right:5px;
+    padding-left:10px;
+}
+.container a{
+    color:grey;
+}
+footer{
+    margin-top: 75px;
+}
