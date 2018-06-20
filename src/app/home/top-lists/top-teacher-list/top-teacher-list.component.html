@@ -1,13 +1,15 @@
 <div class="row">
-        <div class="col-xs-12">
-            <ul class="list-group panel panel-primary">
-                <h3 class="panel-heading">Top Professors</h3>
-                <div class="panel-body">
+    <div class="col-xs-12">
+        <ul class="list-group panel panel-primary">
+            <h3 class="panel-heading">Top Professors</h3>
+            <div class="panel-body">
                 <a class="list-group-item clearfix" style="cursor: pointer" *ngFor="let professor of professorList">
                     <div>{{ professor.getTitle()}} {{ professor.getLastName()}} {{ professor.getFirstName()}}</div>
-                    <div>{{ professor.getRating() }}</div>
+                    <div><span *ngFor="let index of [1,2,3,4,5]"
+                               [ngClass]="index <= professor.getRating() ? 'glyphicon glyphicon-star': 'glyphicon glyphicon-star-empty'"></span>
+                    </div>
                 </a>
-                </div>
-            </ul>
-        </div>
- </div>
+            </div>
+        </ul>
+    </div>
+</div>

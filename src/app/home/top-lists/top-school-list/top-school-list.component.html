@@ -5,7 +5,9 @@
             <div class="panel-body">
                 <a class="list-group-item clearfix" style="cursor: pointer" *ngFor="let school of schoolList">
                     <div>{{school.getName()}}</div>
-                    <div>{{ school.getRating() }}</div>
+                    <div><span *ngFor="let index of [1,2,3,4,5]"
+                               [ngClass]="index <= school.getRating() ? 'glyphicon glyphicon-star': 'glyphicon glyphicon-star-empty'"></span>
+                    </div>
                 </a>
             </div>
         </ul>
