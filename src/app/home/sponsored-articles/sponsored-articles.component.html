@@ -1,3 +1,11 @@
-<p>
-  sponsored-articles works!
-</p>
+<div class="row">
+    <div class="col-xs-12 list-group-item">
+        <div *ngFor="let article of getArticles().slice()" class="col-xs-3">
+            <div  >
+                <a href={{article.url}}><img src={{article.imgUrl}} alt="lófasz"></a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
