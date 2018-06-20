@@ -5,7 +5,7 @@ import {ProfessorComponent} from "./professor/professor.component";
 
 const appRoutes: Routes = [
     {path: "", component: HomeComponent},
-    {path: "/professor/:id", component: ProfessorComponent}
+    {path: "professor/:id", component: ProfessorComponent}
 ];
 
 @NgModule({

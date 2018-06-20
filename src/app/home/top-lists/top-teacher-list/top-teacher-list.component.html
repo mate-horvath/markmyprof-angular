@@ -3,7 +3,11 @@
         <ul class="list-group panel panel-primary">
             <h3 class="panel-heading">Top Professors</h3>
             <div class="panel-body">
-                <a class="list-group-item clearfix" style="cursor: pointer" *ngFor="let professor of professors">
+                <a *ngFor="let professor of professors; let i = index"
+                   [routerLink]="['professor', i ]"
+                   class="list-group-item clearfix"
+                   style="cursor: pointer"
+                >
                     <div>{{ professor.getTitle()}} {{ professor.getLastName()}} {{ professor.getFirstName()}} ( {{
                         professor.getSchool()}} )
                     </div>

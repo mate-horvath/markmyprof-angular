@@ -12,4 +12,8 @@ export class ProfessorsService {
     getProfessors(): Professor[] {
         return this.professors.slice();
     }
+
+    getProfessor(id: number): Professor {
+        return this.professors[id];
+    }
 }
