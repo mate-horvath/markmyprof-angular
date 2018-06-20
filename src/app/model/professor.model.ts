@@ -5,13 +5,15 @@ export class Professor {
     private website: string;
     private subjectList: string[];
     private rating: number;
+    private school: string;
 
 
-    constructor(firstName: string, lastName: string, title: string, rating: number) {
+    constructor(firstName: string, lastName: string, title: string, rating: number, school: string) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.title = title;
         this.rating = rating;
+        this.school = school;
     }
 
     getFirstName(): string {
@@ -28,5 +30,9 @@ export class Professor {
 
     getRating(): number {
         return this.rating;
+    }
+
+    getSchool(): string {
+        return this.school;
     }
 }
