@@ -11,6 +11,7 @@ import {SponsoredArticlesComponent} from './home/sponsored-articles/sponsored-ar
 import {FooterComponent} from './footer/footer.component';
 import {HomeComponent} from './home/home.component';
 import {AppRoutingModule} from "./app-routing.module";
+import { ProfessorComponent } from './professor/professor.component';
 
 @NgModule({
     declarations: [
@@ -22,7 +23,8 @@ import {AppRoutingModule} from "./app-routing.module";
         TopSchoolListComponent,
         SponsoredArticlesComponent,
         FooterComponent,
-        HomeComponent
+        HomeComponent,
+        ProfessorComponent
     ],
     imports: [
         BrowserModule,
