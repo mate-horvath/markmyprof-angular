@@ -1,20 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {School} from "../../../model/school.model";
+import {SchoolsService} from "../../../services/schools.service";
 
 @Component({
-  selector: 'app-top-school-list',
-  templateUrl: './top-school-list.component.html',
-  styleUrls: ['./top-school-list.component.css']
+    selector: 'app-top-school-list',
+    templateUrl: './top-school-list.component.html',
+    styleUrls: ['./top-school-list.component.css'],
+    providers: [SchoolsService]
 })
 export class TopSchoolListComponent implements OnInit {
-  private schoolList: School[] = [];
+    private schoolList: School[];
 
-  constructor() {
-      this.schoolList.push(new School("Corvinus University of Budapest", 5));
-      this.schoolList.push(new School("Technical University of Budapest", 3))
-  }
+    constructor(private schoolService: SchoolsService) {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+        this.schoolList = this.schoolService.getSchools();
+    }
 
 }
