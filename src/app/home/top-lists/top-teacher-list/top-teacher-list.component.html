@@ -11,9 +11,9 @@
                     <div>
                         {{ professor.getTitle()}} {{ professor.getLastName()}} {{ professor.getFirstName()}}
                     </div>
-                    <!--<div><span *ngFor="let index of [1,2,3,4,5]"-->
-                    <!--[ngClass]="index <= professor.getRating() ? 'glyphicon glyphicon-star': 'glyphicon glyphicon-star-empty'"></span>-->
-                    <!--</div>-->
+                    <div><span *ngFor="let index of [1,2,3,4,5]"
+                               [ngClass]="index <= professor.getRating() ? 'glyphicon glyphicon-star': 'glyphicon glyphicon-star-empty'"></span>
+                    </div>
                 </a>
             </div>
         </ul>

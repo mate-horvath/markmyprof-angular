@@ -13,14 +13,14 @@ export class DataStorageService {
 
     async getProfessor(id: String) {
         const professor = await this.httpClient.get<Professor>(`http://0.0.0.0:8080/professor/${id}`).toPromise();
-        this.professorsService.setProfessor(new Professor(professor['id'], professor['firstName'], professor['lastName'], professor['title'], professor['webSite']));
+        this.professorsService.setProfessor(new Professor(professor['id'], professor['firstName'], professor['lastName'], professor['title'], professor['webSite'], 3));
     }
 
     async getProfessors() {
         const professors = await this.httpClient.get<Professor[]>(`http://0.0.0.0:8080/professors`).toPromise();
         const profList: Professor[] = [];
         for (const professor of professors) {
-            profList.push(new Professor(professor['id'], professor['firstName'], professor['lastName'], professor['title'], professor['webSite']));
+            profList.push(new Professor(professor['id'], professor['firstName'], professor['lastName'], professor['title'], professor['webSite'], 3));
         }
         console.log(profList);
         this.professorsService.setProfessors(profList);
