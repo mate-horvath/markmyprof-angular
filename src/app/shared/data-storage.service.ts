@@ -22,7 +22,6 @@ export class DataStorageService {
         for (const professor of professors) {
             profList.push(new Professor(professor['id'], professor['firstName'], professor['lastName'], professor['title'], professor['webSite'], 3));
         }
-        console.log(profList);
         this.professorsService.setProfessors(profList);
     }
 
@@ -32,7 +31,6 @@ export class DataStorageService {
         for (const school of schools) {
             schoolList.push(new School(school['name'], school['phoneNumber'], 0, school['webSite']));
         }
-        console.log(schoolList);
         this.schoolsService.setSchools(schoolList);
     }
 }
