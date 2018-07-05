@@ -7,12 +7,14 @@ export class ProfessorsService {
     private professors: Professor[] = [];
     private activeProfessor: Professor;
     professorChanged = new Subject<Professor>();
+    professorListChanged = new Subject<Professor[]>();
 
     constructor() {
     }
 
-    getProfessors(): Professor[] {
-        return this.professors.slice();
+    setProfessors(professors: Professor[]) {
+        this.professors = professors;
+        this.professorListChanged.next(professors);
     }
 
     setProfessor(professor: Professor) {
