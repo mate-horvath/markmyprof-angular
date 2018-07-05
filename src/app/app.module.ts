@@ -13,6 +13,8 @@ import {HomeComponent} from './home/home.component';
 import {AppRoutingModule} from "./app-routing.module";
 import {ProfessorComponent} from './professor/professor.component';
 import {HttpClientModule} from "@angular/common/http";
+import {SchoolsService} from './services/schools.service';
+import {ProfessorsService} from './services/professors.service';
 
 @NgModule({
     declarations: [
@@ -32,7 +34,7 @@ import {HttpClientModule} from "@angular/common/http";
         AppRoutingModule,
         HttpClientModule
     ],
-    providers: [],
+    providers: [SchoolsService, ProfessorsService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
