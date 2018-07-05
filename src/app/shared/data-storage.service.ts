@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import {Injectable} from "@angular/core";
-import {HttpClient, HttpParams} from "@angular/common/http";
-=======
-import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
->>>>>>> 3e21c11d077078be16320f1eb9eaf119b4385dd5
+import {HttpClient} from "@angular/common/http";
 import 'rxjs/Rx';
 import {Professor} from '../model/professor.model';
 import {ProfessorsService} from '../services/professors.service';

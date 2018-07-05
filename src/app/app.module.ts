@@ -13,15 +13,11 @@ import {HomeComponent} from './home/home.component';
 import {AppRoutingModule} from "./app-routing.module";
 import {ProfessorComponent} from './professor/professor.component';
 import {HttpClientModule} from "@angular/common/http";
-<<<<<<< HEAD
 import {LoginComponent} from './auth/login/login.component';
 import {RegisterComponent} from './auth/register/register.component';
 import {FormsModule} from "@angular/forms";
 import {ProfessorsService} from "./services/professors.service";
-=======
 import {SchoolsService} from './services/schools.service';
-import {ProfessorsService} from './services/professors.service';
->>>>>>> 3e21c11d077078be16320f1eb9eaf119b4385dd5
 
 @NgModule({
     declarations: [
@@ -44,11 +40,7 @@ import {ProfessorsService} from './services/professors.service';
         HttpClientModule,
         FormsModule
     ],
-<<<<<<< HEAD
-    providers: [ProfessorsService],
-=======
     providers: [SchoolsService, ProfessorsService],
->>>>>>> 3e21c11d077078be16320f1eb9eaf119b4385dd5
     bootstrap: [AppComponent]
 })
 export class AppModule {
