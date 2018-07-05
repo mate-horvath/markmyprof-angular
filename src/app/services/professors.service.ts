@@ -1,19 +1,22 @@
 import {Professor} from "../model/professor.model";
+import {Subject} from "rxjs/Subject";
+import {Injectable} from "@angular/core";
 
+@Injectable()
 export class ProfessorsService {
     private professors: Professor[] = [];
-
+    private activeProfessor: Professor;
+    professorChanged = new Subject<Professor>();
 
     constructor() {
-        this.professors.push(new Professor('Mate', 'Horvath', 'Dr', 5, 'BCE'));
-        this.professors.push(new Professor('Erik', 'Szigeti', 'Jr', 1, 'BME'))
     }
 
     getProfessors(): Professor[] {
         return this.professors.slice();
     }
 
-    getProfessor(id: number): Professor {
-        return this.professors[id];
+    setProfessor(professor: Professor) {
+        this.activeProfessor = professor;
+        this.professorChanged.next(professor);
     }
 }

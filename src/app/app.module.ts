@@ -11,7 +11,8 @@ import {SponsoredArticlesComponent} from './home/sponsored-articles/sponsored-ar
 import {FooterComponent} from './footer/footer.component';
 import {HomeComponent} from './home/home.component';
 import {AppRoutingModule} from "./app-routing.module";
-import { ProfessorComponent } from './professor/professor.component';
+import {ProfessorComponent} from './professor/professor.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
     declarations: [
@@ -24,11 +25,12 @@ import { ProfessorComponent } from './professor/professor.component';
         SponsoredArticlesComponent,
         FooterComponent,
         HomeComponent,
-        ProfessorComponent
+        ProfessorComponent,
     ],
     imports: [
         BrowserModule,
-        AppRoutingModule
+        AppRoutingModule,
+        HttpClientModule
     ],
     providers: [],
     bootstrap: [AppComponent]
