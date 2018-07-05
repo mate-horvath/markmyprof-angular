@@ -13,6 +13,10 @@ import {HomeComponent} from './home/home.component';
 import {AppRoutingModule} from "./app-routing.module";
 import {ProfessorComponent} from './professor/professor.component';
 import {HttpClientModule} from "@angular/common/http";
+import {LoginComponent} from './auth/login/login.component';
+import {RegisterComponent} from './auth/register/register.component';
+import {FormsModule} from "@angular/forms";
+import {ProfessorsService} from "./services/professors.service";
 
 @NgModule({
     declarations: [
@@ -26,13 +30,16 @@ import {HttpClientModule} from "@angular/common/http";
         FooterComponent,
         HomeComponent,
         ProfessorComponent,
+        LoginComponent,
+        RegisterComponent,
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
-        HttpClientModule
+        HttpClientModule,
+        FormsModule
     ],
-    providers: [],
+    providers: [ProfessorsService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

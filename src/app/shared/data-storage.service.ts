@@ -1,5 +1,5 @@
 import {Injectable} from "@angular/core";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpParams} from "@angular/common/http";
 import 'rxjs/Rx';
 import {Professor} from "../model/professor.model";
 import {ProfessorsService} from "../services/professors.service";
