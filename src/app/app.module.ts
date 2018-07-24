@@ -11,7 +11,13 @@ import {SponsoredArticlesComponent} from './home/sponsored-articles/sponsored-ar
 import {FooterComponent} from './footer/footer.component';
 import {HomeComponent} from './home/home.component';
 import {AppRoutingModule} from "./app-routing.module";
-import { ProfessorComponent } from './professor/professor.component';
+import {ProfessorComponent} from './professor/professor.component';
+import {HttpClientModule} from "@angular/common/http";
+import {LoginComponent} from './auth/login/login.component';
+import {RegisterComponent} from './auth/register/register.component';
+import {FormsModule} from "@angular/forms";
+import {ProfessorsService} from "./services/professors.service";
+import {SchoolsService} from './services/schools.service';
 
 @NgModule({
     declarations: [
@@ -24,13 +30,17 @@ import { ProfessorComponent } from './professor/professor.component';
         SponsoredArticlesComponent,
         FooterComponent,
         HomeComponent,
-        ProfessorComponent
+        ProfessorComponent,
+        LoginComponent,
+        RegisterComponent,
     ],
     imports: [
         BrowserModule,
-        AppRoutingModule
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule
     ],
-    providers: [],
+    providers: [SchoolsService, ProfessorsService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

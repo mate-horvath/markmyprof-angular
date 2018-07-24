@@ -6,25 +6,32 @@
         </div>
         <div class="row">
             <div class="col-xs-3">
-                <img [src]="imagePath" alt="" class="img-responsive">
+                <div class="container-fluid">
+                    <div class="row">
+                        <img [src]="imagePath" alt="" class="img-responsive">
+                    </div>
+                    <div class="row">
+                        <a class="btn btn-primary col-xs-offset-2"> Click Me </a>
+                    </div>
+                </div>
             </div>
             <div class="col-xs-9">
                 <div class="row">
                     <div class="col-xs-8">
-                        <h2>{{ professor.getTitle()}} {{ professor.getLastName()}} {{
-                            professor.getFirstName()}}</h2>
+                        <h2>{{ (professor.getTitle()) }} {{ (professor.getLastName())}} {{
+                            (professor.getFirstName())}} </h2>
                     </div>
-                    <div class="col-xs-4">
-                        <h2>Rating: <span *ngFor="let index of [1,2,3,4,5]"
-                                          [ngClass]="index <= professor.getRating() ? 'glyphicon glyphicon-star': 'glyphicon glyphicon-star-empty'"></span>
-                        </h2>
-                    </div>
+                    <!--<div class="col-xs-4">-->
+                    <!--<h2>Rating: <span *ngFor="let index of [1,2,3,4,5]"-->
+                    <!--[ngClass]="index <= (professor.getRating() | async) ? 'glyphicon glyphicon-star': 'glyphicon glyphicon-star-empty'"></span>-->
+                    <!--</h2>-->
+                    <!--</div>-->
                 </div>
-                <div class="row">
-                    <div class="col-xs-8 pull-left">
-                        {{ professor.getSchool() }}
-                    </div>
-                </div>
+                <!--<div class="row">-->
+                <!--<div class="col-xs-8 pull-left">-->
+                <!--{{ professor.getSchool() | async }}-->
+                <!--</div>-->
+                <!--</div>-->
             </div>
         </div>
     </div>

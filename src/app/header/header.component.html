@@ -11,7 +11,8 @@
                 <li><a href="#">Tanároknak</a></li>
                 <li><a href="#">Fórum</a></li>
             </ul>
-            <div class="btn btn-warning pull-right">Login</div>
+            <div class="btn btn-warning pull-right" [routerLink]="['login']">Login</div>
+            <div [routerLink]="['register']" class="btn btn-warning pull-right">Register</div>
         </div>
     </div>
 </nav>

@@ -1,21 +1,26 @@
-import {Component, OnInit} from '@angular/core';
-import {ProfessorsService} from "../../../services/professors.service";
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Professor} from "../../../model/professor.model";
+import {DataStorageService} from "../../../shared/data-storage.service";
+import {ProfessorsService} from "../../../services/professors.service";
 
 @Component({
     selector: 'app-top-teacher-list',
     templateUrl: './top-teacher-list.component.html',
     styleUrls: ['./top-teacher-list.component.css'],
-    providers: [ProfessorsService]
+    providers: [DataStorageService, ProfessorsService]
 })
 export class TopTeacherListComponent implements OnInit {
-    private professors: Professor[];
+    private professors: Professor[] = [];
 
-    constructor(private professorsService: ProfessorsService) {
+    constructor(private dataStorageService: DataStorageService, private professorsService: ProfessorsService) {
     }
 
     ngOnInit() {
-        this.professors = this.professorsService.getProfessors();
+        this.professorsService.professorListChanged.subscribe(
+            (professors: Professor[]) => {
+                this.professors = professors;
+            }
+        );
+        this.dataStorageService.getProfessors();
     }
-
 }
